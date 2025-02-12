@@ -180,6 +180,14 @@ const App = () => {
           </button>
         </div>
       </div>
+      <p>
+        Created by{" "}
+        <a
+          href="https://www.instagram.com/ric_codes/"
+          className="underline text-blue-500">
+          Hritik sharma
+        </a>
+      </p>
     </div>
   );
 };
