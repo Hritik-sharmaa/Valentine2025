@@ -61,25 +61,27 @@ const App = () => {
   const getNoButtonText = () => phrases[Math.min(noCount, phrases.length - 1)];
 
   const moveButton = () => {
-    const containerWidth = 512;
-    const containerHeight = window.innerHeight * 1.0;
-    const buttonWidth = windowSize.width < 640 ? 120 : 200;
-    const buttonHeight = 50;
+    const containerWidth = Math.min(512, window.innerWidth - 32); // max-w-lg with padding
+    const containerHeight = Math.min(400, window.innerHeight * 0.6); // 60vh with max height
+    const buttonWidth = windowSize.width < 640 ? 100 : 150; // Smaller button size
+    const buttonHeight = 40;
+
     const maxX = containerWidth - buttonWidth;
     const maxY = containerHeight - buttonHeight;
 
-    const newX = Math.min(Math.max(Math.random() * maxX, 0), maxX);
-    const newY = Math.min(Math.max(Math.random() * maxY, 0), maxY);
+    const newX = Math.max(Math.min(Math.random() * maxX, maxX), 0);
+    const newY = Math.max(Math.min(Math.random() * maxY, maxY), 0);
 
     setButtonPosition({ x: newX, y: newY });
     setNoCount(noCount + 1);
   };
 
   const getYesButtonSize = () => {
-    const baseSize = windowSize.width < 640 ? 16 : 20;
+    const containerWidth = Math.min(512, window.innerWidth - 32);
+    const baseSize = windowSize.width < 640 ? 14 : 18;
     const increment = windowSize.width < 640 ? 4 : 6;
-    const maxSize = windowSize.width < 640 ? 40 : 60;
-    return baseSize + noCount * increment;
+    const maxSize = containerWidth / 8; // Limit maximum size relative to container
+    return Math.min(baseSize + noCount * increment, maxSize);
   };
 
   const BackgroundHearts = () => (
