@@ -9,7 +9,7 @@ A beautifully designed Valentine-themed web project built with **React and Tailw
 - ❤️ Elegant and minimal design
 - 🌸 Smooth animations and transitions
 - 🎨 Fully responsive layout
-- ⚡ Built with React & TypeScript for scalability
+- ⚡ Built with React for scalability
 - 🎀 Styled with Tailwind CSS for quick and efficient styling
 
 ## 🛠️ Tech Stack
