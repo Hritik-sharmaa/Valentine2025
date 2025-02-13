@@ -44,6 +44,7 @@ const App = () => {
     "Really sure?",
     "Please think again!",
     "Last chance!",
+    "Let's go pookieee",
     "Surely not?",
     "You might regret this!",
     "Give it another thought!",
@@ -56,6 +57,7 @@ const App = () => {
     "Is that your final answer?",
     "You're breaking my heart ;(",
     "Please say yessssssss..... :(",
+    "Pookiee pleaseeeee "
   ];
 
   const getNoButtonText = () => phrases[Math.min(noCount, phrases.length - 1)];
