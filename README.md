@@ -34,7 +34,7 @@ A beautifully designed Valentine-themed web project built with **React and Tailw
    ```sh
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:5137) in your browser.
+5. Open [http://localhost:5137](http://localhost:5137) in your browser.
 
 ## 📝 License
 This project is **MIT Licensed**.
